@@ -4,27 +4,11 @@ window.addEventListener('load', () => {
         document.getElementById('loader').style.opacity = '0';
         setTimeout(() => {
             document.getElementById('loader').style.display = 'none';
+            // Reproducir preview de Spotify después de cargar
+            showNotification('❤️ ¡Web cargada! Dale play a "Piel Canela"');
         }, 500);
     }, 2000);
 });
-
-// Música de fondo
-const backgroundMusic = document.getElementById('backgroundMusic');
-let isPlaying = false;
-
-function toggleMusic() {
-    if (backgroundMusic.paused) {
-        backgroundMusic.play();
-        isPlaying = true;
-        document.getElementById('musicIcon').className = 'fas fa-volume-up';
-        showNotification('🎵 Música activada');
-    } else {
-        backgroundMusic.pause();
-        isPlaying = false;
-        document.getElementById('musicIcon').className = 'fas fa-volume-mute';
-        showNotification('🔇 Música desactivada');
-    }
-}
 
 // Countdown timer - Desde el 19 de diciembre de 2025
 function updateCountdown() {
@@ -164,22 +148,16 @@ console.log('%c❤️❤️❤️ TE AMO MI VIDA ❤️❤️❤️', 'font-size
 console.log('%cEsta web fue creada con todo mi amor para ti', 'font-size: 20px; color: #333; font-weight: bold;');
 console.log('%cDesde el 19 de Diciembre de 2025... cada día a tu lado es un regalo ❤️', 'font-size: 16px; color: #ff6b6b;');
 console.log('%c¡Feliz Día del Amor y la Amistad! 💕', 'font-size: 20px; color: #ee5a6f; font-weight: bold;');
+console.log('%c🎶 Escucha "Piel Canela" de Bobby Capó mientras lees esta carta', 'font-size: 16px; color: #1DB954; font-weight: bold;');
 
-// Activar música automáticamente si el usuario interactúa
-document.addEventListener('click', () => {
-    if (!isPlaying) {
-        backgroundMusic.volume = 0.3; // Volumen al 30%
+// Abrir Spotify en app móvil si es posible
+document.querySelector('.spotify-btn').addEventListener('click', function(e) {
+    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+    if (isMobile) {
+        e.preventDefault();
+        window.location.href = 'spotify:track:1heE6XiaOzRtsku8YrfCjN';
+        setTimeout(() => {
+            window.location.href = 'https://open.spotify.com/track/1heE6XiaOzRtsku8YrfCjN';
+        }, 1000);
     }
-}, { once: true });
-
-// Efecto de brillo en los botones
-const buttons = document.querySelectorAll('.btn, .music-btn, .music-control');
-buttons.forEach(button => {
-    button.addEventListener('mouseenter', () => {
-        button.style.boxShadow = '0 0 20px rgba(255, 107, 107, 0.8)';
-    });
-    
-    button.addEventListener('mouseleave', () => {
-        button.style.boxShadow = '';
-    });
 });
