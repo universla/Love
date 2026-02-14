@@ -8,33 +8,44 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <meta property="og:title" content="Para ti, mi amor ❤️">
     <meta property="og:description" content="Una carta de amor especial desde el 19 de diciembre de 2025">
-    <meta property="og:image" content="https://i.scdn.co/image/ab67616d0000b273a9a9a9a9a9a9a9a9a9a9a9a9">
 </head>
 <body>
     <div class="container">
-        <!-- Pantalla de inicio con corazón grande -->
-        <div class="start-screen" id="startScreen">
-            <div class="big-heart" onclick="startExperience()">
-                <i class="fas fa-heart"></i>
-            </div>
-            <h1>Para ti, mi amor</h1>
-            <p class="subtitle">Presiona el corazón para descubrir lo que guardo para ti ❤️</p>
-            <div class="hint">
-                <p>14 de Febrero de 2026</p>
-            </div>
-        </div>
-
-        <!-- Tarjeta principal (oculta inicialmente) -->
-        <div class="card" id="mainCard" style="display: none;">
+        <!-- Tarjeta principal -->
+        <div class="card" id="mainCard">
             <div class="card-header">
-                <i class="fas fa-heart"></i>
+                <i class="fas fa-heart pulse"></i>
                 <h1>Para ti, mi amor</h1>
                 <p>14 de Febrero de 2026</p>
             </div>
 
             <div class="card-body">
+                <!-- Frases románticas animadas -->
+                <div class="romantic-phrases">
+                    <div class="phrase fade-in" style="--delay: 0.2s">
+                        <i class="fas fa-quote-left"></i>
+                        <span>En tus ojos encontré mi hogar.</span>
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <div class="phrase fade-in" style="--delay: 0.4s">
+                        <i class="fas fa-quote-left"></i>
+                        <span>Amar es encontrar en otro el complemento perfecto de tu alma.</span>
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <div class="phrase fade-in" style="--delay: 0.6s">
+                        <i class="fas fa-quote-left"></i>
+                        <span>Contigo aprendí que el amor no se busca, se construye día a día.</span>
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                    <div class="phrase fade-in" style="--delay: 0.8s">
+                        <i class="fas fa-quote-left"></i>
+                        <span>Eres el sueño que nunca quiero despertar.</span>
+                        <i class="fas fa-quote-right"></i>
+                    </div>
+                </div>
+
                 <!-- Reproductor de Spotify integrado -->
-                <div class="spotify-player">
+                <div class="spotify-player fade-in" style="--delay: 1s">
                     <h2>🎶 Nuestra canción: "Piel Canela"</h2>
                     <div class="spotify-container">
                         <iframe 
@@ -54,7 +65,7 @@
                     </div>
                 </div>
 
-                <div class="message">
+                <div class="message fade-in" style="--delay: 1.2s">
                     <p>Mi vida, mi amor, mi todo,</p>
                     <p>Hoy quiero dedicarte estas palabras que salen directamente de lo más profundo de mi corazón. Desde el día en que te conocí, mi mundo cambió para siempre y encontró su verdadero sentido.</p>
                     <p>Cada momento a tu lado es un regalo que atesoro con todo mi ser. Tu sonrisa ilumina mis días más oscuros, y tu amor me da fuerzas para enfrentar cualquier desafío que la vida ponga en mi camino.</p>
@@ -62,7 +73,17 @@
                     <p>Cada día que pasa me enamoro más de ti, de tu forma de ser, de tu manera de ver la vida, de cómo me haces sentir la persona más especial del mundo solo con una mirada.</p>
                 </div>
 
-                <div class="reasons">
+                <div class="poetic-section fade-in" style="--delay: 1.4s">
+                    <h2>✨ Palabras que nacen del alma</h2>
+                    <div class="poem">
+                        <p>Tu risa es la melodía que calma mis tormentas,</p>
+                        <p>Tus ojos, el refugio donde descanso mi alma,</p>
+                        <p>Tu abrazo, el universo donde quiero quedarme para siempre.</p>
+                        <p class="highlight-poem">Eres mi hoy, mi mañana y mi eternidad.</p>
+                    </div>
+                </div>
+
+                <div class="reasons fade-in" style="--delay: 1.6s">
                     <h2>❤️ Razones por las que te amo:</h2>
                     <ul id="reasonsList">
                         <li>Tu sonrisa que ilumina mi día y mi alma</li>
@@ -80,7 +101,7 @@
                     </ul>
                 </div>
 
-                <div class="our-story">
+                <div class="our-story fade-in" style="--delay: 1.8s">
                     <h2>📖 Nuestra historia de amor</h2>
                     <div class="story-content">
                         <p><strong>19 de Diciembre de 2025</strong> - El día que todo cambió, el día en que nuestras vidas se unieron para siempre.</p>
@@ -90,7 +111,20 @@
                     </div>
                 </div>
 
-                <div class="promise">
+                <div class="love-quotes fade-in" style="--delay: 2s">
+                    <h2>💫 Frases de amor para ti</h2>
+                    <div class="quote-box">
+                        <p>"El amor no se mide por cuánto se dice 'te amo', sino por cuánto se demuestra cada día."</p>
+                    </div>
+                    <div class="quote-box">
+                        <p>"Amar no es mirarse el uno al otro; es mirar juntos en la misma dirección."</p>
+                    </div>
+                    <div class="quote-box">
+                        <p>"Eres mi lugar favorito en este mundo."</p>
+                    </div>
+                </div>
+
+                <div class="promise fade-in" style="--delay: 2.2s">
                     <h2>💝 Mi promesa eterna para ti</h2>
                     <p>Te prometo amarte cada día más, estar a tu lado en las buenas y en las malas, en la salud y en la enfermedad, en la alegría y en la tristeza.</p>
                     <p>Te prometo ser tu refugio cuando el mundo sea demasiado duro, tu apoyo cuando necesites fuerza, y tu compañero en cada aventura que la vida nos depare.</p>
@@ -98,7 +132,7 @@
                     <p>Te prometo que haré todo lo posible para que nunca dejes de sonreír, para que nunca dudes de mi amor, y para que siempre sepas que eres la persona más importante en mi vida.</p>
                 </div>
 
-                <div class="countdown">
+                <div class="countdown fade-in" style="--delay: 2.4s">
                     <h2>⏰ Tiempo que llevamos juntos</h2>
                     <div class="timer">
                         <div class="time-box">
@@ -120,7 +154,7 @@
                     </div>
                 </div>
 
-                <div class="love-declaration">
+                <div class="love-declaration fade-in" style="--delay: 2.6s">
                     <h2>💌 Declaración de amor</h2>
                     <div class="declaration-content">
                         <p>Quiero que sepas que eres la razón por la cual sonrío cada mañana al despertar. Eres el pensamiento que me acompaña durante todo el día y el sueño más hermoso que tengo cada noche.</p>
@@ -130,7 +164,7 @@
                     </div>
                 </div>
 
-                <div class="love-letter">
+                <div class="love-letter fade-in" style="--delay: 2.8s">
                     <button class="btn" onclick="showLetter()">
                         <i class="fas fa-envelope"></i> Abrir carta de amor secreta
                     </button>
@@ -148,7 +182,20 @@
                     </div>
                 </div>
 
-                <div class="final-message">
+                <div class="final-poem fade-in" style="--delay: 3s">
+                    <h2>🌹 Poema para ti</h2>
+                    <div class="poem-content">
+                        <p>Si el amor fuera un instante,</p>
+                        <p>yo te amaría por toda la eternidad.</p>
+                        <p>Si el tiempo se detuviera,</p>
+                        <p>yo elegiría este momento contigo.</p>
+                        <p>Si las estrellas dejaran de brillar,</p>
+                        <p>tus ojos seguirían iluminando mi universo.</p>
+                        <p class="highlight-poem">Porque contigo, mi amor, hasta el silencio canta.</p>
+                    </div>
+                </div>
+
+                <div class="final-message fade-in" style="--delay: 3.2s">
                     <h2>✨ Mensaje final</h2>
                     <p>Recuerda siempre que no importa lo que pase, no importa dónde estemos o qué obstáculos enfrentemos, mi amor por ti es eterno e inquebrantable.</p>
                     <p>Eres mi elección, hoy y siempre. Eres mi sueño hecho realidad, mi historia de amor favorita, y mi futuro más brillante.</p>
