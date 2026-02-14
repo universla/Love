@@ -12,17 +12,20 @@
 </head>
 <body>
     <div class="container">
-        <!-- Pantalla de carga -->
-        <div class="loader-screen" id="loader">
-            <div class="heart-loader"></div>
-            <p>Cargando mi corazón...</p>
-            <div class="spotify-preview">
-                <p>🎵 Escuchando: "Piel Canela" - Bobby Capó</p>
+        <!-- Pantalla de inicio con corazón grande -->
+        <div class="start-screen" id="startScreen">
+            <div class="big-heart" onclick="startExperience()">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h1>Para ti, mi amor</h1>
+            <p class="subtitle">Presiona el corazón para descubrir lo que guardo para ti ❤️</p>
+            <div class="hint">
+                <p>14 de Febrero de 2026</p>
             </div>
         </div>
 
-        <!-- Tarjeta principal -->
-        <div class="card" id="mainCard">
+        <!-- Tarjeta principal (oculta inicialmente) -->
+        <div class="card" id="mainCard" style="display: none;">
             <div class="card-header">
                 <i class="fas fa-heart"></i>
                 <h1>Para ti, mi amor</h1>
@@ -45,7 +48,7 @@
                     </div>
                     <div class="spotify-links">
                         <a href="https://open.spotify.com/track/1heE6XiaOzRtsku8YrfCjN" target="_blank" class="spotify-btn">
-                            <i class="fab fa-spotify"></i> Escuchar en Spotify
+                            <i class="fab fa-spotify"></i> Abrir en Spotify
                         </a>
                         <p class="song-info">Bolero clásico de Bobby Capó - "Que se quede el infinito sin estrellas..."</p>
                     </div>
@@ -170,4 +173,4 @@
 
     <script src="script.js"></script>
 </body>
-                    </html>
+    </html>
