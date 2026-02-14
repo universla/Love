@@ -12,6 +12,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 20px;
+    overflow-x: hidden;
 }
 
 /* Pantalla de carga */
@@ -66,6 +67,24 @@ body {
     font-weight: bold;
 }
 
+.music-btn {
+    background: white;
+    color: #ff6b6b;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    border-radius: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+.music-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.3);
+}
+
 @keyframes heartbeat {
     0%, 100% { transform: rotate(45deg) scale(1); }
     50% { transform: rotate(45deg) scale(1.2); }
@@ -80,6 +99,7 @@ body {
     width: 100%;
     overflow: hidden;
     animation: fadeIn 1s ease;
+    position: relative;
 }
 
 @keyframes fadeIn {
@@ -99,6 +119,25 @@ body {
     font-size: 60px;
     margin-bottom: 15px;
     animation: pulse 2s infinite;
+}
+
+.music-control {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.music-control:hover {
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(1.1);
 }
 
 @keyframes pulse {
@@ -153,6 +192,7 @@ body {
     color: #d32f2f;
     margin-bottom: 15px;
     text-align: center;
+    font-size: 24px;
 }
 
 .reasons ul {
@@ -175,65 +215,58 @@ body {
     background: white;
 }
 
-.photo-gallery {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    margin-bottom: 30px;
-    text-align: center;
-}
-
-.photo-gallery h2 {
-    color: #d32f2f;
-    margin-bottom: 20px;
-}
-
-.gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 15px;
-    margin-top: 15px;
-}
-
-.photo-placeholder {
-    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
-    height: 150px;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    font-size: 40px;
-    cursor: pointer;
-    transition: transform 0.3s ease;
-}
-
-.photo-placeholder:hover {
-    transform: scale(1.05);
-}
-
-.photo-placeholder p {
-    font-size: 12px;
-    margin-top: 5px;
-}
-
-.promise {
+.our-story {
     background: linear-gradient(135deg, #a1c4fd, #c2e9fb);
     padding: 25px;
     border-radius: 15px;
     margin-bottom: 30px;
+}
+
+.our-story h2 {
+    color: #1976d2;
+    margin-bottom: 20px;
     text-align: center;
+    font-size: 24px;
+}
+
+.story-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    line-height: 1.8;
+}
+
+.story-content p {
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+
+.story-content strong {
+    color: #ff6b6b;
+    font-size: 18px;
+}
+
+.promise {
+    background: linear-gradient(135deg, #f6d365, #fda085);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
 }
 
 .promise h2 {
-    color: #1976d2;
+    color: #e65100;
     margin-bottom: 15px;
+    text-align: center;
+    font-size: 24px;
 }
 
 .promise p {
-    font-size: 18px;
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
     line-height: 1.8;
+    font-size: 17px;
 }
 
 .countdown {
@@ -242,11 +275,13 @@ body {
     border-radius: 15px;
     margin-bottom: 30px;
     text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .countdown h2 {
     color: #d32f2f;
     margin-bottom: 20px;
+    font-size: 24px;
 }
 
 .timer {
@@ -262,6 +297,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     text-align: center;
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
 }
 
 .time-box span:first-child {
@@ -274,6 +310,32 @@ body {
 .time-box span:last-child {
     font-size: 14px;
     opacity: 0.9;
+}
+
+.love-declaration {
+    background: linear-gradient(135deg, #d4fc79, #96e6a1);
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 30px;
+}
+
+.love-declaration h2 {
+    color: #33691e;
+    margin-bottom: 20px;
+    text-align: center;
+    font-size: 24px;
+}
+
+.declaration-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    line-height: 1.8;
+}
+
+.declaration-content p {
+    margin-bottom: 15px;
+    font-size: 17px;
 }
 
 .love-letter {
@@ -291,6 +353,7 @@ body {
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+    font-weight: bold;
 }
 
 .btn:hover {
@@ -316,6 +379,12 @@ body {
     line-height: 1.8;
     font-size: 18px;
     border: 2px solid #ff6b6b;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
 .letter p {
@@ -326,12 +395,37 @@ body {
     margin-top: 30px;
     font-style: italic;
     text-align: right;
+    font-size: 18px;
 }
 
 .signature-name {
     font-weight: bold;
     color: #ff6b6b;
-    font-size: 20px;
+    font-size: 24px;
+}
+
+.final-message {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    padding: 25px;
+    border-radius: 15px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.final-message h2 {
+    color: #c62828;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.final-message p {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    line-height: 1.8;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .card-footer {
@@ -347,8 +441,9 @@ body {
 }
 
 .hearts i {
-    margin: 0 10px;
+    margin: 0 5px;
     animation: float 2s ease-in-out infinite;
+    display: inline-block;
 }
 
 @keyframes float {
@@ -359,6 +454,13 @@ body {
 .card-footer p {
     font-size: 20px;
     font-weight: bold;
+    margin: 10px 0;
+}
+
+.card-footer .date {
+    font-size: 16px;
+    opacity: 0.9;
+    margin-top: 10px;
 }
 
 /* Responsive */
@@ -378,6 +480,13 @@ body {
     .time-box span:first-child {
         font-size: 28px;
     }
+
+    .music-control {
+        width: 35px;
+        height: 35px;
+        top: 15px;
+        right: 15px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -388,4 +497,8 @@ body {
     .reasons li {
         font-size: 14px;
     }
-  }
+
+    .card-header h1 {
+        font-size: 24px;
+    }
+    }
