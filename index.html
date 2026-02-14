@@ -8,11 +8,20 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Música de fondo -->
+    <audio id="backgroundMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+        Tu navegador no soporta audio.
+    </audio>
+    
     <div class="container">
         <!-- Pantalla de carga -->
         <div class="loader-screen" id="loader">
             <div class="heart-loader"></div>
             <p>Cargando mi corazón...</p>
+            <button class="music-btn" onclick="toggleMusic()">
+                <i class="fas fa-music"></i> Activar música
+            </button>
         </div>
 
         <!-- Tarjeta principal -->
@@ -21,57 +30,58 @@
                 <i class="fas fa-heart"></i>
                 <h1>Para ti, mi amor</h1>
                 <p>14 de Febrero de 2026</p>
+                <button class="music-control" onclick="toggleMusic()">
+                    <i class="fas fa-volume-up" id="musicIcon"></i>
+                </button>
             </div>
 
             <div class="card-body">
                 <div class="message">
-                    <p>Querido/a <span class="highlight">mi vida</span>,</p>
-                    <p>Hoy quiero dedicarte estas palabras que salen directamente de mi corazón. Desde el día en que te conocí, mi vida cambió para siempre.</p>
-                    <p>Cada momento a tu lado es un regalo que atesoro. Tu sonrisa ilumina mis días más oscuros, y tu amor me da fuerzas para enfrentar cualquier desafío.</p>
-                    <p>Eres mi mejor amigo/a, mi confidente, mi todo. Contigo he descubierto lo que realmente significa amar.</p>
+                    <p>Mi vida, mi amor, mi todo,</p>
+                    <p>Hoy quiero dedicarte estas palabras que salen directamente de lo más profundo de mi corazón. Desde el día en que te conocí, mi mundo cambió para siempre y encontró su verdadero sentido.</p>
+                    <p>Cada momento a tu lado es un regalo que atesoro con todo mi ser. Tu sonrisa ilumina mis días más oscuros, y tu amor me da fuerzas para enfrentar cualquier desafío que la vida ponga en mi camino.</p>
+                    <p>Eres mi confidente, mi refugio, mi todo. Contigo he descubierto lo que realmente significa amar de verdad, sin condiciones, sin límites.</p>
+                    <p>Cada día que pasa me enamoro más de ti, de tu forma de ser, de tu manera de ver la vida, de cómo me haces sentir la persona más especial del mundo solo con una mirada.</p>
                 </div>
 
                 <div class="reasons">
-                    <h2>❤️ 10 razones por las que te amo:</h2>
+                    <h2>❤️ Razones por las que te amo:</h2>
                     <ul id="reasonsList">
-                        <li>Tu sonrisa que ilumina mi día</li>
-                        <li>La forma en que me escuchas</li>
-                        <li>Tu paciencia infinita</li>
-                        <li>Cómo me haces sentir especial</li>
-                        <li>Tu sentido del humor</li>
-                        <li>La forma en que me apoyas</li>
-                        <li>Tu bondad con los demás</li>
-                        <li>Cómo me entiendes sin palabras</li>
-                        <li>Tu fuerza y determinación</li>
-                        <li>Simplemente por ser tú</li>
+                        <li>Tu sonrisa que ilumina mi día y mi alma</li>
+                        <li>La forma tan especial en que me escuchas</li>
+                        <li>Tu paciencia infinita y tu comprensión</li>
+                        <li>Cómo me haces sentir la persona más especial</li>
+                        <li>Tu sentido del humor que me hace reír siempre</li>
+                        <li>La forma en que me apoyas en todo momento</li>
+                        <li>Tu bondad y tu corazón tan grande</li>
+                        <li>Cómo me entiendes sin necesidad de palabras</li>
+                        <li>Tu fuerza y determinación que admiro tanto</li>
+                        <li>Tu forma de amarme cada día más</li>
+                        <li>Tu mirada que me roba el aliento</li>
+                        <li>Simplemente por ser tú, perfectamente imperfecta</li>
                     </ul>
                 </div>
 
-                <div class="photo-gallery">
-                    <h2>📸 Nuestros momentos especiales</h2>
-                    <div class="gallery">
-                        <div class="photo-placeholder">
-                            <i class="fas fa-image"></i>
-                            <p>Tu foto aquí</p>
-                        </div>
-                        <div class="photo-placeholder">
-                            <i class="fas fa-image"></i>
-                            <p>Tu foto aquí</p>
-                        </div>
-                        <div class="photo-placeholder">
-                            <i class="fas fa-image"></i>
-                            <p>Tu foto aquí</p>
-                        </div>
+                <div class="our-story">
+                    <h2>📖 Nuestra historia de amor</h2>
+                    <div class="story-content">
+                        <p><strong>19 de Diciembre de 2025</strong> - El día que todo cambió, el día en que nuestras vidas se unieron para siempre.</p>
+                        <p>Recuerdo ese día como si fuera ayer, el momento exacto en que supe que eras especial, que eras diferente, que eras la persona que había estado esperando toda mi vida.</p>
+                        <p>Cada día a tu lado ha sido una aventura maravillosa, llena de momentos inolvidables, risas compartidas, y un amor que crece más fuerte con cada amanecer.</p>
+                        <p>Desde esa fecha, mi corazón late al ritmo del tuyo, y cada segundo contigo es un tesoro que guardo con celo en mi memoria.</p>
                     </div>
                 </div>
 
                 <div class="promise">
-                    <h2>💝 Mi promesa para ti</h2>
-                    <p>Te prometo amarte cada día más, estar a tu lado en las buenas y en las malas, y hacer todo lo posible para que nunca dejes de sonreír.</p>
+                    <h2>💝 Mi promesa eterna para ti</h2>
+                    <p>Te prometo amarte cada día más, estar a tu lado en las buenas y en las malas, en la salud y en la enfermedad, en la alegría y en la tristeza.</p>
+                    <p>Te prometo ser tu refugio cuando el mundo sea demasiado duro, tu apoyo cuando necesites fuerza, y tu compañero en cada aventura que la vida nos depare.</p>
+                    <p>Te prometo nunca dejar de sorprenderte, de cuidarte, de valorarte y de recordarte cada día lo increíblemente especial que eres para mí.</p>
+                    <p>Te prometo que haré todo lo posible para que nunca dejes de sonreír, para que nunca dudes de mi amor, y para que siempre sepas que eres la persona más importante en mi vida.</p>
                 </div>
 
                 <div class="countdown">
-                    <h2>⏰ Tiempo juntos</h2>
+                    <h2>⏰ Tiempo que llevamos juntos</h2>
                     <div class="timer">
                         <div class="time-box">
                             <span id="days">00</span>
@@ -92,20 +102,39 @@
                     </div>
                 </div>
 
+                <div class="love-declaration">
+                    <h2>💌 Declaración de amor</h2>
+                    <div class="declaration-content">
+                        <p>Quiero que sepas que eres la razón por la cual sonrío cada mañana al despertar. Eres el pensamiento que me acompaña durante todo el día y el sueño más hermoso que tengo cada noche.</p>
+                        <p>Tu amor ha transformado mi vida de maneras que nunca imaginé posibles. Me has enseñado lo que es amar sin miedo, confiar sin dudar, y vivir cada momento con intensidad y pasión.</p>
+                        <p>Cada latido de mi corazón te pertenece, cada sueño que tengo incluye tu presencia, y cada meta que trazo tiene como objetivo hacerte feliz.</p>
+                        <p>Eres mi presente más hermoso y mi futuro más deseado. Contigo he encontrado mi hogar, no en un lugar, sino en tu corazón.</p>
+                    </div>
+                </div>
+
                 <div class="love-letter">
                     <button class="btn" onclick="showLetter()">
-                        <i class="fas fa-envelope"></i> Abrir carta de amor
+                        <i class="fas fa-envelope"></i> Abrir carta de amor secreta
                     </button>
                     <div id="letterContent" class="letter-hidden">
                         <div class="letter">
-                            <p>Mi amor,</p>
-                            <p>Si pudiera elegirte mil veces, te elegiría mil veces más. Eres el latido de mi corazón, la razón de mi sonrisa y el sueño que nunca quiero despertar.</p>
-                            <p>Gracias por ser mi persona, por amarme tal como soy y por hacerme la persona más feliz del mundo.</p>
-                            <p>Te amo más de lo que las palabras pueden expresar.</p>
-                            <p class="signature">Para siempre tuyo/a,</p>
-                            <p class="signature-name">❤️ Tu amor</p>
+                            <p>Mi amor infinito,</p>
+                            <p>Si pudiera elegirte mil veces, te elegiría mil veces más. Eres el latido de mi corazón, la razón de mi sonrisa y el sueño más hermoso que nunca quiero despertar.</p>
+                            <p>Cada día a tu lado es un regalo que agradezco con todo mi ser. Tu amor me ha hecho una mejor persona, me ha enseñado el verdadero significado de la felicidad y me ha mostrado que el amor verdadero sí existe.</p>
+                            <p>Tus ojos son mi refugio, tu abrazo mi paz, y tu amor mi razón de ser. Contigo he descubierto que el amor no es solo un sentimiento, es una elección diaria, y cada día elijo amarte más que el anterior.</p>
+                            <p>Gracias por ser mi persona, por amarme tal como soy, con mis defectos y virtudes, y por hacerme la persona más feliz del mundo solo con tu presencia.</p>
+                            <p>Te amo más allá de lo que las palabras pueden expresar, más allá del tiempo y el espacio. Te amo con cada fibra de mi ser, con cada latido de mi corazón, con cada aliento de mi vida.</p>
+                            <p class="signature">Para siempre tuyo,</p>
+                            <p class="signature-name">❤️ Tu amor eterno</p>
                         </div>
                     </div>
+                </div>
+
+                <div class="final-message">
+                    <h2>✨ Mensaje final</h2>
+                    <p>Recuerda siempre que no importa lo que pase, no importa dónde estemos o qué obstáculos enfrentemos, mi amor por ti es eterno e inquebrantable.</p>
+                    <p>Eres mi elección, hoy y siempre. Eres mi sueño hecho realidad, mi historia de amor favorita, y mi futuro más brillante.</p>
+                    <p>Te amo hoy, mañana y por toda la eternidad.</p>
                 </div>
             </div>
 
@@ -114,12 +143,15 @@
                     <i class="fas fa-heart"></i>
                     <i class="fas fa-heart"></i>
                     <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>
+                    <i class="fas fa-heart"></i>
                 </div>
-                <p>Te amo infinitamente</p>
+                <p>Te amo infinitamente ❤️</p>
+                <p class="date">Desde el 19 de Diciembre de 2025</p>
             </div>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
-</html>
+                        </html>
