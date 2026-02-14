@@ -1,14 +1,27 @@
-// Pantalla de carga
-window.addEventListener('load', () => {
+// Función para iniciar la experiencia al presionar el corazón
+function startExperience() {
+    const startScreen = document.getElementById('startScreen');
+    const mainCard = document.getElementById('mainCard');
+    
+    // Animación de desaparición de pantalla de inicio
+    startScreen.style.opacity = '0';
+    startScreen.style.transform = 'scale(0.9)';
+    
     setTimeout(() => {
-        document.getElementById('loader').style.opacity = '0';
+        startScreen.style.display = 'none';
+        mainCard.style.display = 'block';
+        
+        // Pequeño delay para que la animación sea suave
         setTimeout(() => {
-            document.getElementById('loader').style.display = 'none';
-            // Reproducir preview de Spotify después de cargar
-            showNotification('❤️ ¡Web cargada! Dale play a "Piel Canela"');
-        }, 500);
-    }, 2000);
-});
+            // Iniciar efectos después de mostrar el contenido
+            typeWriterEffect();
+            startFloatingHearts();
+            
+            // Mostrar notificación
+            showNotification('❤️ ¡Bienvenida! Presiona play en Spotify para escuchar "Piel Canela"');
+        }, 100);
+    }, 800);
+}
 
 // Countdown timer - Desde el 19 de diciembre de 2025
 function updateCountdown() {
@@ -91,8 +104,10 @@ function createFloatingHeart() {
     }, 20);
 }
 
-// Crear corazones flotantes cada 2 segundos
-setInterval(createFloatingHeart, 2000);
+// Iniciar corazones flotantes
+function startFloatingHearts() {
+    setInterval(createFloatingHeart, 2000);
+}
 
 // Notificaciones
 function showNotification(message) {
@@ -140,15 +155,12 @@ function typeWriterEffect() {
     }, 100);
 }
 
-// Iniciar efecto de typing después de cargar
-setTimeout(typeWriterEffect, 2500);
-
 // Mensaje secreto en consola
 console.log('%c❤️❤️❤️ TE AMO MI VIDA ❤️❤️❤️', 'font-size: 40px; color: #ff6b6b; font-weight: bold; text-shadow: 0 0 10px rgba(255, 107, 107, 0.7);');
 console.log('%cEsta web fue creada con todo mi amor para ti', 'font-size: 20px; color: #333; font-weight: bold;');
 console.log('%cDesde el 19 de Diciembre de 2025... cada día a tu lado es un regalo ❤️', 'font-size: 16px; color: #ff6b6b;');
 console.log('%c¡Feliz Día del Amor y la Amistad! 💕', 'font-size: 20px; color: #ee5a6f; font-weight: bold;');
-console.log('%c🎶 Escucha "Piel Canela" de Bobby Capó mientras lees esta carta', 'font-size: 16px; color: #1DB954; font-weight: bold;');
+console.log('%c🎶 Presiona el corazón grande para comenzar y luego play en Spotify para escuchar "Piel Canela"', 'font-size: 16px; color: #1DB954; font-weight: bold;');
 
 // Abrir Spotify en app móvil si es posible
 document.querySelector('.spotify-btn').addEventListener('click', function(e) {
